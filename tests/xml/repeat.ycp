@@ -1,0 +1,3 @@
+{
+  repeat { return false; } until (false);
+}

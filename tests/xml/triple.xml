@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ycp version="2.15.8.39280">
+  <block kind="file">
+    <symbols>
+      <symbol global="1" category="filename" type="unspec" name="triple.ycp"/>
+    </symbols>
+    <statements>
+      <stmt><return><yetriple><cond><compare op="=="><lhs><yebinary name="+" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></lhs><rhs><const type="int" value="2"/></rhs></compare></cond><true><const type="bool" value="true"/></true><false><const type="bool" value="false"/></false></yetriple></return></stmt>
+    </statements>
+  </block>
+</ycp>

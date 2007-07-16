@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ycp version="2.15.8.39280">
+  <block kind="file">
+    <symbols>
+      <symbol global="1" category="filename" type="unspec" name="builtin_integer.ycp"/>
+    </symbols>
+    <statements>
+      <stmt><return><yebinary name="+" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="-" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><const type="int" value="-42"/></return></stmt>
+      <stmt><return><yebinary name="*" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="/" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="%" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="&amp;" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="^" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="|" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="&lt;&lt;" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="&gt;&gt;" type="function"><const type="int" value="1"/><const type="int" value="1"/></yebinary></return></stmt>
+      <stmt><return><yeunary name="~" type="function"><const type="int" value="1"/></yeunary></return></stmt>
+      <stmt><return><builtin name="tointeger" args="1"><element><const type="string" value="1"/></element></builtin></return></stmt>
+    </statements>
+  </block>
+</ycp>

@@ -1,0 +1,61 @@
+ycpxml2ruby
+
+Intro
+-----
+
+yast2-core, since approx version 2.15.8, has the ability to transform
+YCP into and XML representation. This is based on the abstract syntax
+tree built up by the scanner/parser of libycp.
+
+The 'ycpc' CLI tool can be instructed (with the '-x' parameter) to output
+XML instead of yast bytecode.
+
+
+Usage
+-----
+
+'convert.rb' is the main file for the converter
+
+ycpc -c -x code.ycp -o code.xml
+
+ruby convert.rb code.xml > code.rb
+
+
+Files
+-----
+
+block.rb
+  Handling everything within <block>...</block>
+
+convert.rb
+  main()
+
+expressions.rb
+  Handling expressions
+
+helper.rb
+  Helper functions
+
+listener.rb
+  Main rexml stream listener class
+
+output.rb
+  Output handler
+  Cares for proper indentation and comment placing
+
+statements.rb
+  Handling statements
+
+symbols.rb
+  Handling symbol declarations
+
+
+ToDo
+----
+
+The ycp scanner throws comments away. These should be made available
+to the XML code and re-appear in the Ruby output.
+
+YCP variable names might clash with Ruby keywords.
+
+Implement builtins, like 'bracket', etc.

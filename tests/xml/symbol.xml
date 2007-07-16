@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ycp version="2.15.8.39280">
+  <block kind="file">
+    <symbols>
+      <symbol global="1" category="filename" type="unspec" name="symbol.ycp"/>
+    </symbols>
+    <statements>
+      <stmt><return><const type="symbol" value="symbol"/></return></stmt>
+    </statements>
+  </block>
+</ycp>

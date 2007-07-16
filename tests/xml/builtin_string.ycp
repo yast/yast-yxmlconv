@@ -1,0 +1,7 @@
+{
+  return "a" + "b";
+  return "a" + 42;
+  return "a" + .path;
+  return "a" + `b;
+  return tostring( 3.14159 );
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ycp version="2.15.8.39280">
+  <block kind="file">
+    <symbols>
+      <symbol global="1" category="filename" type="unspec" name="builtin_boolean.ycp"/>
+    </symbols>
+    <statements>
+      <stmt><return><yebinary name="&amp;&amp;" type="function"><const type="bool" value="true"/><const type="bool" value="false"/></yebinary></return></stmt>
+      <stmt><return><yebinary name="||" type="function"><const type="bool" value="false"/><const type="bool" value="true"/></yebinary></return></stmt>
+      <stmt><return><yeunary name="!" type="function"><yebinary name="&amp;&amp;" type="function"><const type="bool" value="false"/><const type="bool" value="false"/></yebinary></yeunary></return></stmt>
+      <stmt><return><yeunary name="!" type="function"><yebinary name="||" type="function"><yebinary name="&amp;&amp;" type="function"><const type="bool" value="false"/><yebinary name="||" type="function"><const type="bool" value="false"/><const type="bool" value="true"/></yebinary></yebinary><yeunary name="!" type="function"><yebinary name="&amp;&amp;" type="function"><const type="bool" value="true"/><const type="bool" value="false"/></yebinary></yeunary></yebinary></yeunary></return></stmt>
+    </statements>
+  </block>
+</ycp>

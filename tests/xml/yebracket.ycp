@@ -1,0 +1,4 @@
+{
+  map<integer, integer> m = $[1:1];
+  return m[2]:0;
+}

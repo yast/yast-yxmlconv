@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ycp version="2.15.8.39280">
+  <block kind="file">
+    <symbols>
+      <symbol global="1" category="filename" type="unspec" name="term1.ycp"/>
+    </symbols>
+    <statements>
+      <stmt><return><yeterm name="term" args="3"><element><const type="int" value="1"/></element><element><const type="bool" value="false"/></element><element><const type="string" value="true"/></element></yeterm></return></stmt>
+    </statements>
+  </block>
+</ycp>

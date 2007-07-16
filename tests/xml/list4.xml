@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ycp version="2.15.8.39280">
+  <block kind="file">
+    <symbols>
+      <symbol global="1" category="filename" type="unspec" name="list4.ycp"/>
+      <symbol category="variable" type="integer" name="i"/>
+    </symbols>
+    <statements>
+      <stmt><assign name="i"><const type="int" value="42"/></assign></stmt>
+      <stmt><return><list size="4"><element><const type="int" value="1"/></element><element><const type="int" value="1"/></element><element><const type="int" value="1"/></element><element><const type="int" value="1"/></element></list></return></stmt>
+      <stmt><return><list size="4"><element><variable name="i"/></element><element><yebinary name="+" type="function"><variable name="i"/><variable name="i"/></yebinary></element><element><yebinary name="+" type="function"><yebinary name="+" type="function"><variable name="i"/><variable name="i"/></yebinary><variable name="i"/></yebinary></element><element><yebinary name="+" type="function"><yebinary name="+" type="function"><yebinary name="+" type="function"><variable name="i"/><variable name="i"/></yebinary><variable name="i"/></yebinary><variable name="i"/></yebinary></element></list></return></stmt>
+    </statements>
+  </block>
+</ycp>

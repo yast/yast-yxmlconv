@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ycp version="2.15.8.39280">
+  <block kind="file">
+    <symbols>
+      <symbol global="1" category="filename" type="unspec" name="listmap.ycp"/>
+    </symbols>
+    <statements>
+      <stmt><return><list size="4"><element><map size="1"><element><key><const type="int" value="1"/></key><value><const type="bool" value="true"/></value></element></map></element><element><map size="2"><element><key><const type="int" value="2"/></key><value><const type="bool" value="false"/></value></element><element><key><const type="int" value="3"/></key><value><const type="symbol" value="three"/></value></element></map></element><element><map size="0"></map></element><element><map size="4"><element><key><const type="int" value="1"/></key><value><const type="int" value="1"/></value></element><element><key><const type="int" value="2"/></key><value><const type="int" value="2"/></value></element><element><key><const type="int" value="3"/></key><value><const type="int" value="3"/></value></element><element><key><const type="int" value="4"/></key><value><const type="int" value="4"/></value></element></map></element></list></return></stmt>
+    </statements>
+  </block>
+</ycp>

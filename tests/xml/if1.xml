@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ycp version="2.15.8.39280">
+  <block kind="file">
+    <symbols>
+      <symbol global="1" category="filename" type="unspec" name="if1.ycp"/>
+    </symbols>
+    <statements>
+      <stmt><if><const type="bool" value="true"/>
+  <then>
+    <return><const type="bool" value="false"/></return>
+  </then>
+
+  <else>
+    <return><const type="bool" value="true"/></return>
+  </else>
+</if></stmt>
+    </statements>
+  </block>
+</ycp>
