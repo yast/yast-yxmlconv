@@ -25,8 +25,6 @@
 #
 #
 
-$LOAD_PATH << File.dirname(__FILE__) # find all other files in same dir
-
 require 'rexml/document'
 require 'output'
 require 'helper'
@@ -48,6 +46,7 @@ class YcpListener
     @state = :undef
     @listener = nil
     $output = Output.new( output, flags )
+    $lnum = 1
   end
 
   def xmldecl( version, encoding, standalone )
@@ -55,14 +54,20 @@ class YcpListener
   end
 
   def text( s )
+    $lnum += s.count( "\n" )
     s.strip!
-    return if s.empty?
+     return if s.empty?
     return @listener.text( s ) if @listener
   end
 
   def tag_start( name, attrs )
     debug "++ #{self.class}.tag_start(#{name}) @listener #{@listener}"
-    return @listener.tag_start( name, attrs ) if @listener
+    begin
+      return @listener.tag_start( name, attrs ) if @listener
+    rescue Exception => e
+      STDERR.puts "In line #{$lnum}: " + e
+      raise e
+    end
     out = nil
     case name
       when "ycp"
@@ -90,4 +95,3 @@ class YcpListener
   end
 
 end
-
