@@ -53,9 +53,26 @@ symbols.rb
 ToDo
 ----
 
-The ycp scanner throws comments away. These should be made available
-to the XML code and re-appear in the Ruby output.
+- comments
+  The ycp scanner throws comments away. These should be made available
+  to the XML code and re-appear in the Ruby output.
 
-YCP variable names might clash with Ruby keywords.
+- ruby keywords
+  YCP variable names might clash with Ruby keywords.
 
-Implement builtins, like 'bracket', etc.
+- ycp builtins
+  Implement builtins, like 'bracket', etc.
+
+- include files
+  The xml output doesn't show 'include' statements but only 'filename'
+  at the beginning and end of an included file. The file itself is part
+  of the xml stream.
+  Maybe <filename> tags should be tracked and ruby conversion disabled
+  until <filename> points back to the original file.
+
+- module
+  modules aren't handled yet
+
+- yereference
+  References aren't handled yet
+
