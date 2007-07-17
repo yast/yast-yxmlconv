@@ -74,6 +74,29 @@ class YFilename
 end
 
 #------------------------------------------------
+# Parse <typedef... />
+#
+class YTypedef
+  def tag_start( name, attrs )
+    case name
+      when "typedef"
+	h = Helper.attrs2hash attrs
+	$output.o( { :com => "typedef " << h["name"] << " " << h["type"] } )
+      else
+	raise "#{self}.tag_start(#{name}) UNKNOWN"
+    end
+  end
+  def tag_end( name )
+    case name
+      when "typedef"
+	return false
+      else
+	raise "#{self}.tag_start(#{name}) UNKNOWN"
+    end
+  end
+end
+
+#------------------------------------------------
 # Parse <import ... />
 #
 class YImport
@@ -145,16 +168,17 @@ end
 
 #------------------------------------------------
 # Parse <if> ... </if>
-#
+#  <then> and <else> are optional
 #
 class YIf
   def initialize
     @listener = nil
     @pending = nil
+    @state = nil
   end
 
   def tag_start( name, attrs )
-    debug "++ #{self}.tag_start(#{name}) @listener #{@listener} @pending #{@pending}"
+    debug "++ #{self}.tag_start(#{name}) @listener #{@listener} @pending #{@pending} @state #{@state}"
     return @listener.tag_start( name, attrs ) if @listener
     if (@pending == :expression) then
       @listener = YExpression.new
@@ -163,19 +187,23 @@ class YIf
     if (@pending == :statement) then
       @listener = YStatement.new :pure
       @pending = nil
+      @state = :stmt
     end
     return @listener.tag_start( name, attrs ) if @listener
     case name
       when "if"
 	@pending = :expression
-	$output.o( "if" )
+	$output.o( "if " )
 	$output.o( :po )
+	@state = :if
       when "then"
-	$output.o( [ :pc, " then", :eol, :inc ]  )
+	$output.o( [ " then", :eol ]  )
 	@pending = :statement
+	@state = :then
       when "else"
 	$output.o( [ :eol, :dec, "else", :eol, :inc ] )
 	@pending = :statement
+	@state = :else
       else
 	raise "#{self}.tag_start(#{name}) UNKNOWN"
     end
@@ -183,16 +211,20 @@ class YIf
   end
 
   def tag_end( name )
-    debug "-- #{self}.tag_end(#{name}) @listener #{@listener}"
+    debug "-- #{self}.tag_end(#{name}) @listener #{@listener}, @state #{@state}"
     if (@listener) then
       @listener = nil unless @listener.tag_end( name )
+      if @listener == nil then
+	$output.o( [ :pc, :inc ] ) if @state == :if
+	@state = nil
+      end
       return true	# wait for </if>
     end
     case name
       when "if"
 	raise "Unclosed if" unless @pending == nil
 	debug "xx End of #{self}"
-	$output.o( :end )
+	$output.o( :end )			# implicit :dec
 	return false
       when "then", "else"
 	@pending = nil
@@ -514,7 +546,6 @@ class YWhile
     end
     case name
       when "while"
-	raise "Unclosed while" unless @pending == nil
 	$output.o( :end )
 	debug "xx End of #{self}"
 	return false
@@ -642,6 +673,114 @@ end
 
 
 #------------------------------------------------
+# Parse <case>...</case> resp. <default> ... </default>
+#
+#
+class YCase
+  def initialize
+    @listener = nil
+    @state = nil
+  end
+
+  def tag_start( name, attrs )
+    debug "++ #{self}.tag_start(#{name}) @listener #{@listener}"
+    return @listener.tag_start( name, attrs ) if @listener
+    case name
+      when "case"
+	$output.o( [ :eol, "when " ] )
+	@listener = YExpression.new
+	@state = :expr
+      when "default"
+	$output.o( [ :eol, "else", :eol, :inc ] )
+	@listener = YStatement.new :pure
+	@state = :stmt
+      else
+	raise "#{self}.tag_start(#{name}) UNKNOWN"
+    end
+    return true
+  end
+
+  def tag_end( name )
+    debug "-- #{self}.tag_end(#{name}) @listener #{@listener}"
+    if (@listener) then
+      @listener = nil unless @listener.tag_end( name )
+      unless @listener then		# listener just finished
+	if @state == :expr then		# switch to statement if it was expression
+	  @listener = YStatement.new :pure
+	  @state = :stmt
+	  $output.o( [ :eol, :inc ] )
+	end
+      end
+      return true
+    end
+    case name
+      when "case"
+	$output.o( :dec ) if @state == :stmt
+	debug "xx End of #{self}"
+	return false
+      else
+	raise "#{self}.tag_end(#{name}) UNKNOWN"
+    end
+    return true
+  end
+end
+
+
+#------------------------------------------------
+# Parse <switch> <cond>...</cond> <case>...</case> </switch>
+#
+#
+class YSwitch
+  def initialize
+    @listener = nil
+    @pending = nil
+  end
+
+  def tag_start( name, attrs )
+    debug "++ #{self}.tag_start(#{name}) @listener #{@listener}"
+    return @listener.tag_start( name, attrs ) if @listener
+    if @pending == :case
+      @listener = YCase.new
+      @pending = nil
+      return @listener.tag_start( name, attrs )
+    end
+    case name
+      when "switch"
+	$output.o( "case " )
+      when "cond"
+	@listener = YExpression.new
+      else
+	raise "#{self}.tag_start(#{name}) UNKNOWN, pending #{@pending}"
+    end
+    return true
+  end
+
+  def tag_end( name )
+    debug "-- #{self}.tag_end(#{name}) @listener #{@listener}"
+    if (@listener) then
+      @listener = nil unless @listener.tag_end( name )
+      if @listener == nil then
+	@pending = :case		# prep for multiple <case>
+      end
+      return true
+    end
+    case name
+      when "switch"
+	$output.o( :end )
+	debug "xx End of #{self}"
+	return false
+      when "cond"
+	$output.o( :inc )		# prep for final end
+	@pending = :case
+      else
+	raise "#{self}.tag_end(#{name}) UNKNOWN"
+    end
+    return true
+  end
+end
+
+
+#------------------------------------------------
 #
 # YStatement listener
 # Listens to single statements
@@ -692,6 +831,10 @@ class YStatement
 	  @listener = YContinue.new
 	when "break"
 	  @listener = YBreak.new
+	when "typedef"
+	  @listener = YTypedef.new
+	when "switch"
+	  @listener = YSwitch.new
 	else
 	  raise "#{self}.tag_start(#{name}) UNHANDLED"
       end
