@@ -9,7 +9,13 @@ require 'helper'
 #
 
 class YConstant
+  def initialize
+    @listener = nil
+    @type = nil
+  end
+
   def tag_start( name, attrs )
+    return @listener.tag_start( name, attrs ) if @listener
     h = Helper.attrs2hash attrs
     debug "#{self}.tag_start(#{name}, #{h})"
     case h["type"]
@@ -19,12 +25,21 @@ class YConstant
 	$output.o( '"' << h["value"] << '"' )
       when "symbol"
 	$output.o( ':' << h["value"] )
+      when "term"
+	$output.o( [ ":", h["name"], :po ] )
+	@listener = YExpression.new
+	@type = h["type"]
       else
 	$output.o( h["value"] )
     end
   end
   def tag_end( name )
+    if (@listener) then
+      @listener = nil unless @listener.tag_end( name )
+      return true
+    end
     debug "YConstant.tag_end(#{name})"
+    $output.o( :pc ) if @type == "term"
     return false if name == "const"
     raise "#{self}.tag_end(#{name}) UNKNOWN"
   end
@@ -348,8 +363,7 @@ class YETerm
 	@pending = :expression
       when "yeterm"
 	h = Helper.attrs2hash attrs
-	$output.o( h["name"] )
-	$output.o( :po )
+	$output.o( [ ":", h["name"], :po ] )	# FIXME
       else
 	raise "#{self}.tag_start(#{name}) UNKNOWN"
     end
@@ -442,7 +456,7 @@ class YBuiltin
       @count += 1
       if @pending == :block then
 	@listener = YExpression.new
-	$output.o( [ :pc, ".", @name, " {", "|" ] )
+	$output.o( [ :pc, ".", @name, " { ", "|" ] )
 	first = true
 	@symbols.each { |sym|
 	    $output.o( :sep ) unless first
@@ -855,6 +869,7 @@ class YETriple
     case name
       when "yetriple"
 	@pending = :cond
+	$output.o( :po )
       when "cond", "true", "false"
 	@listener = YExpression.new
       else
@@ -874,12 +889,53 @@ class YETriple
 	raise "Unclosed yetriple, pending #{@pending}" unless @pending == nil
 	debug "xx End of #{self}"
 	return false
-      when "cond", "true"
-	$output.o( " ? " ) if name == "cond"
-	$output.o( " : " ) if name == "true"
+      when "cond"
+	$output.o( [ :pc, " ? " ] )
+	@pending = nil
+      when "true"
+	$output.o( " : " )
 	@pending = nil
       when "false"
 	@listener = nil
+      else
+	raise "#{self}.tag_end(#{name}) UNKNOWN"
+    end
+    return true
+  end
+end
+
+
+#------------------------------------------------
+# Parse <yereference> ...
+#
+#
+class YEReference
+  def initialize
+    @listener = nil
+    @type = nil
+  end
+
+  def tag_start( name, attrs )
+    debug "++ #{self}.tag_start(#{name}) @listener #{@listener}"
+    return @listener.tag_start( name, attrs ) if @listener
+    case name
+      when "yereference"
+	@listener = YEntry.new
+	$output.o( { :com => "!! reference" } )
+      else
+	raise "#{self}.tag_start(#{name}) UNKNOWN"
+    end
+  end
+
+  def tag_end( name )
+    debug "-- #{self}.tag_end(#{name}) @listener #{@listener}"
+    if (@listener) then
+      @listener = nil unless @listener.tag_end( name )
+      return true
+    end
+    case name
+      when "yereference"
+	return false
       else
 	raise "#{self}.tag_end(#{name}) UNKNOWN"
     end
@@ -947,6 +1003,8 @@ class YExpression
 	@listener = YcpCode.new
       when "yeis"
 	@listener = YEIs.new
+      when "yereference"
+	@listener = YEReference.new
       else
 	raise "#{self}.tag_start(#{name}) UNHANDLED"
     end
