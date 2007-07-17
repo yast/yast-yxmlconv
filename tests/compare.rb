@@ -7,27 +7,27 @@ require '../src/listener'
 require 'converter_test'
 
 class CompareTest < Test::Unit::TestCase
-  def test_converter
+  def test_compare
     result = converter_test( "compare.xml" )
     expected = [
 'i = 42',
 'j = 0',
-'if( i == j ) then',
+'if ( i == j ) then',
 '  return false',
 'else',
-'  if( i > j ) then',
+'  if ( i > j ) then',
 '    return true',
 '  else',
-'    if( i >= j ) then',
+'    if ( i >= j ) then',
 '      return true',
 '    else',
-'      if( i < j ) then',
+'      if ( i < j ) then',
 '        return false',
 '      else',
-'        if( i <= j ) then',
+'        if ( i <= j ) then',
 '          return false',
 '        else',
-'          if( i != j ) then',
+'          if ( i != j ) then',
 '            return true',
 '          else',
 '            return false',
