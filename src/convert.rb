@@ -2,6 +2,8 @@
 # ycp xml to ruby converter
 #
 
+$LOAD_PATH << File.dirname(__FILE__) # find all other files in same dir
+
 require 'listener'
 
 argc = ARGV.length
