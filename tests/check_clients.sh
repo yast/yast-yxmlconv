@@ -1,328 +1,328 @@
-ruby convert.rb --check tests/clients/add-on_auto.xml
-ruby convert.rb --check tests/clients/add-on_proposal.xml
-ruby convert.rb --check tests/clients/add-on.xml
-ruby convert.rb --check tests/clients/autoinst_scripts1_finish.xml
-ruby convert.rb --check tests/clients/autoinst_scripts2_finish.xml
-ruby convert.rb --check tests/clients/autoinst_test_clone.xml
-ruby convert.rb --check tests/clients/autoinst_test_stage.xml
-ruby convert.rb --check tests/clients/autoyast.xml
-ruby convert.rb --check tests/clients/ayast_probe.xml
-# ruby convert.rb --check tests/clients/backup_available_packages.xml
-# ruby convert.rb --check tests/clients/backup_get_packages.xml
-# ruby convert.rb --check tests/clients/backup_proposal.xml
-# ruby convert.rb --check tests/clients/backup_save_profile.xml
-# ruby convert.rb --check tests/clients/backup.xml
-# ruby convert.rb --check tests/clients/bluetooth_auto.xml
-# ruby convert.rb --check tests/clients/bluetooth_proposal.xml
-# ruby convert.rb --check tests/clients/bluetooth.xml
-# ruby convert.rb --check tests/clients/bootfloppy.xml
-# ruby convert.rb --check tests/clients/bootloader_auto.xml
-# ruby convert.rb --check tests/clients/bootloader_finish.xml
-# ruby convert.rb --check tests/clients/bootloader_proposal.xml
-# ruby convert.rb --check tests/clients/bootloader.xml
-# ruby convert.rb --check tests/clients/checkmedia.xml
-# ruby convert.rb --check tests/clients/classes_auto.xml
-# ruby convert.rb --check tests/clients/clone_system.xml
-# ruby convert.rb --check tests/clients/controller.xml
-# ruby convert.rb --check tests/clients/copy_files_finish.xml
-# ruby convert.rb --check tests/clients/copy_logs_finish.xml
-# ruby convert.rb --check tests/clients/copy_systemfiles_finish.xml
-# ruby convert.rb --check tests/clients/country_simple_proposal.xml
-# ruby convert.rb --check tests/clients/create_udev_cdrom.xml
-# ruby convert.rb --check tests/clients/desktop_finish.xml
-# ruby convert.rb --check tests/clients/dhcp-server_auto.xml
-# ruby convert.rb --check tests/clients/dhcp-server.xml
-# ruby convert.rb --check tests/clients/dirinstall_options_proposal.xml
-# ruby convert.rb --check tests/clients/dirinstall_options.xml
-# ruby convert.rb --check tests/clients/dirinstall.xml
-# ruby convert.rb --check tests/clients/disk.xml
-# ruby convert.rb --check tests/clients/dns_auto.xml
-# ruby convert.rb --check tests/clients/dns-server_auto.xml
-# ruby convert.rb --check tests/clients/dns-server.xml
-# ruby convert.rb --check tests/clients/dns.xml
-# ruby convert.rb --check tests/clients/dom0_setup.xml
-# ruby convert.rb --check tests/clients/do_not_show_again_editor.xml
-# ruby convert.rb --check tests/clients/driver_update1_finish.xml
-# ruby convert.rb --check tests/clients/driver_update2_finish.xml
-# ruby convert.rb --check tests/clients/dsl_proposal.xml
-# ruby convert.rb --check tests/clients/dsl.xml
-# ruby convert.rb --check tests/clients/files_auto.xml
-# ruby convert.rb --check tests/clients/firewall_auto.xml
-# ruby convert.rb --check tests/clients/firewall_proposal.xml
-# ruby convert.rb --check tests/clients/firewall.xml
-# ruby convert.rb --check tests/clients/fonts_finish.xml
-# ruby convert.rb --check tests/clients/general_auto.xml
-# ruby convert.rb --check tests/clients/GenProf.xml
-# ruby convert.rb --check tests/clients/groups.xml
-# ruby convert.rb --check tests/clients/host_auto.xml
-# ruby convert.rb --check tests/clients/host.xml
-# ruby convert.rb --check tests/clients/hwinfo_proposal.xml
-# ruby convert.rb --check tests/clients/hwinfo.xml
-# ruby convert.rb --check tests/clients/idedma_auto.xml
-# ruby convert.rb --check tests/clients/idedma_summary.xml
-# ruby convert.rb --check tests/clients/idedma_write.xml
-# ruby convert.rb --check tests/clients/idedma.xml
-# ruby convert.rb --check tests/clients/inetd_auto.xml
-# ruby convert.rb --check tests/clients/inetd_proposal.xml
-# ruby convert.rb --check tests/clients/inetd.xml
-# ruby convert.rb --check tests/clients/inst_addon_update_sources.xml
-# ruby convert.rb --check tests/clients/inst_add-on.xml
-# ruby convert.rb --check tests/clients/installation_worker.xml
-# ruby convert.rb --check tests/clients/installation.xml
-# ruby convert.rb --check tests/clients/inst_ask_net_test.xml
-# ruby convert.rb --check tests/clients/inst_ask_online_update.xml
-# ruby convert.rb --check tests/clients/inst_auth.xml
-# ruby convert.rb --check tests/clients/inst_autoconfigure.xml
-# ruby convert.rb --check tests/clients/inst_autoimage.xml
-# ruby convert.rb --check tests/clients/inst_autoinit.xml
-# ruby convert.rb --check tests/clients/inst_autopost.xml
-# ruby convert.rb --check tests/clients/inst_autosetup.xml
-# ruby convert.rb --check tests/clients/inst_backup.xml
-# ruby convert.rb --check tests/clients/inst_checkmedia.xml
-# ruby convert.rb --check tests/clients/inst_congratulate.xml
-# ruby convert.rb --check tests/clients/inst_custom_packages.xml
-# ruby convert.rb --check tests/clients/inst_custom_part.xml
-# ruby convert.rb --check tests/clients/inst_desktop.xml
-# ruby convert.rb --check tests/clients/inst_dirinstall_finish.xml
-# ruby convert.rb --check tests/clients/inst_dirinstall.xml
-# ruby convert.rb --check tests/clients/inst_disks_activate.xml
-# ruby convert.rb --check tests/clients/inst_disk.xml
-# ruby convert.rb --check tests/clients/inst_doit.xml
-# ruby convert.rb --check tests/clients/inst_do_net_test.xml
-# ruby convert.rb --check tests/clients/inst_do_resize.xml
-# ruby convert.rb --check tests/clients/inst_evms.xml
-# ruby convert.rb --check tests/clients/inst_extrasources.xml
-# ruby convert.rb --check tests/clients/inst_fam.xml
-# ruby convert.rb --check tests/clients/inst_features.xml
-# ruby convert.rb --check tests/clients/inst_finish.xml
-# ruby convert.rb --check tests/clients/inst_hostname.xml
-# ruby convert.rb --check tests/clients/inst_hwinfo.xml
-# ruby convert.rb --check tests/clients/inst_info.xml
-# ruby convert.rb --check tests/clients/inst_iscsi-client.xml
-# ruby convert.rb --check tests/clients/inst_kickoff.xml
-# ruby convert.rb --check tests/clients/inst_language_add-on.xml
-# ruby convert.rb --check tests/clients/inst_language.xml
-# ruby convert.rb --check tests/clients/inst_license.xml
-# ruby convert.rb --check tests/clients/inst_lvm_lv.xml
-# ruby convert.rb --check tests/clients/inst_lvm_pv.xml
-# ruby convert.rb --check tests/clients/inst_mediacopy.xml
-# ruby convert.rb --check tests/clients/inst_media.xml
-# ruby convert.rb --check tests/clients/inst_mode.xml
-# ruby convert.rb --check tests/clients/inst_mouse.xml
-# ruby convert.rb --check tests/clients/inst_netprobe.xml
-# ruby convert.rb --check tests/clients/inst_netsetup.xml
-# ruby convert.rb --check tests/clients/inst_packages.xml
-# ruby convert.rb --check tests/clients/inst_part_proposal.xml
-# ruby convert.rb --check tests/clients/inst_pre_install.xml
-# ruby convert.rb --check tests/clients/inst_prepdisk.xml
-# ruby convert.rb --check tests/clients/inst_proposal.xml
-# ruby convert.rb --check tests/clients/inst_release_notes.xml
-# ruby convert.rb --check tests/clients/inst_repair.xml
-# ruby convert.rb --check tests/clients/inst_resize_ui.xml
-# ruby convert.rb --check tests/clients/inst_restore_settings.xml
-# ruby convert.rb --check tests/clients/inst_rootpart.xml
-# ruby convert.rb --check tests/clients/inst_root.xml
-# ruby convert.rb --check tests/clients/inst_rpmcopy.xml
-# ruby convert.rb --check tests/clients/inst_save_hardware_status.xml
-# ruby convert.rb --check tests/clients/inst_source.xml
-# ruby convert.rb --check tests/clients/inst_startup.xml
-# ruby convert.rb --check tests/clients/inst_suseconfig.xml
-# ruby convert.rb --check tests/clients/inst_suse_register.xml
-# ruby convert.rb --check tests/clients/inst_sw_select.xml
-# ruby convert.rb --check tests/clients/inst_system_analysis.xml
-# ruby convert.rb --check tests/clients/inst_target_part.xml
-# ruby convert.rb --check tests/clients/inst_target_selection.xml
-# ruby convert.rb --check tests/clients/inst_test_workflow.xml
-# ruby convert.rb --check tests/clients/inst_timezone.xml
-# ruby convert.rb --check tests/clients/inst_update_partition.xml
-# ruby convert.rb --check tests/clients/inst_update.xml
-# ruby convert.rb --check tests/clients/inst_user.xml
-# ruby convert.rb --check tests/clients/inst_vm_autoyast.xml
-# ruby convert.rb --check tests/clients/inst_vm_disks.xml
-# ruby convert.rb --check tests/clients/inst_vm_hardware.xml
-# ruby convert.rb --check tests/clients/inst_vm_kickoff.xml
-# ruby convert.rb --check tests/clients/inst_vm_manage.xml
-# ruby convert.rb --check tests/clients/inst_vm_network.xml
-# ruby convert.rb --check tests/clients/inst_vm_options.xml
-# ruby convert.rb --check tests/clients/inst_vm_source.xml
-# ruby convert.rb --check tests/clients/inst_welcome.xml
-# ruby convert.rb --check tests/clients/inst_x11.xml
-# ruby convert.rb --check tests/clients/inst_xen_create.xml
-# ruby convert.rb --check tests/clients/inst_xen_mode.xml
-# ruby convert.rb --check tests/clients/inst_you.xml
-# ruby convert.rb --check tests/clients/ipv6_proposal.xml
-# ruby convert.rb --check tests/clients/irc.xml
-# ruby convert.rb --check tests/clients/irda.xml
-# ruby convert.rb --check tests/clients/iscsi-client_auto.xml
-# ruby convert.rb --check tests/clients/iscsi-client_finish.xml
-# ruby convert.rb --check tests/clients/iscsi-client_proposal.xml
-# ruby convert.rb --check tests/clients/iscsi-client.xml
-# ruby convert.rb --check tests/clients/isdn_proposal.xml
-# ruby convert.rb --check tests/clients/isdn.xml
-# ruby convert.rb --check tests/clients/joystick.xml
-# ruby convert.rb --check tests/clients/kerberos-client_auto.xml
-# ruby convert.rb --check tests/clients/kerberos-client.xml
-# ruby convert.rb --check tests/clients/kerberos.xml
-# ruby convert.rb --check tests/clients/kernel_finish.xml
-# ruby convert.rb --check tests/clients/keyboard_auto.xml
-# ruby convert.rb --check tests/clients/keyboard_proposal.xml
-# ruby convert.rb --check tests/clients/keyboard_simple_proposal.xml
-# ruby convert.rb --check tests/clients/keyboard.xml
-# ruby convert.rb --check tests/clients/lan_auto.xml
-# ruby convert.rb --check tests/clients/language_auto.xml
-# ruby convert.rb --check tests/clients/language_proposal.xml
-# ruby convert.rb --check tests/clients/language_simple_proposal.xml
-# ruby convert.rb --check tests/clients/language.xml
-# ruby convert.rb --check tests/clients/lan_proposal.xml
-# ruby convert.rb --check tests/clients/lan.xml
-# ruby convert.rb --check tests/clients/ldap_auto.xml
-# ruby convert.rb --check tests/clients/ldap_browser.xml
-# ruby convert.rb --check tests/clients/ldap-client.xml
-# ruby convert.rb --check tests/clients/ldap_config.xml
-# ruby convert.rb --check tests/clients/ldap.xml
-# ruby convert.rb --check tests/clients/ldconfig_finish.xml
-# ruby convert.rb --check tests/clients/LogProf.xml
-# ruby convert.rb --check tests/clients/lvm_config_ui.xml
-# ruby convert.rb --check tests/clients/lvm_config.xml
-# ruby convert.rb --check tests/clients/mail_auto.xml
-# ruby convert.rb --check tests/clients/mail.xml
-# ruby convert.rb --check tests/clients/media_proposal.xml
-# ruby convert.rb --check tests/clients/menu.xml
-# ruby convert.rb --check tests/clients/modem_proposal.xml
-# ruby convert.rb --check tests/clients/modem.xml
-# ruby convert.rb --check tests/clients/mode_proposal.xml
-# ruby convert.rb --check tests/clients/mouse_proposal.xml
-# ruby convert.rb --check tests/clients/mouse.xml
-# ruby convert.rb --check tests/clients/network_finish.xml
-# ruby convert.rb --check tests/clients/networkmanager_proposal.xml
-# ruby convert.rb --check tests/clients/network.xml
-# ruby convert.rb --check tests/clients/nfs_auto.xml
-# ruby convert.rb --check tests/clients/nfs-client.xml
-# ruby convert.rb --check tests/clients/nfs.xml
-# ruby convert.rb --check tests/clients/nis_auto.xml
-# ruby convert.rb --check tests/clients/nis-client.xml
-# ruby convert.rb --check tests/clients/nis.xml
-# ruby convert.rb --check tests/clients/ntp-client_auto.xml
-# ruby convert.rb --check tests/clients/ntp-client.xml
-# ruby convert.rb --check tests/clients/online_update_auto.xml
-# ruby convert.rb --check tests/clients/online_update_install.xml
-# ruby convert.rb --check tests/clients/online_update_select.xml
-# ruby convert.rb --check tests/clients/online_update_setup.xml
-# ruby convert.rb --check tests/clients/online_update_start.xml
-# ruby convert.rb --check tests/clients/online_update.xml
-# ruby convert.rb --check tests/clients/osr_module_list.xml
-# ruby convert.rb --check tests/clients/osr_verified_packages.xml
-# ruby convert.rb --check tests/clients/packages_proposal.xml
-# ruby convert.rb --check tests/clients/partitions_proposal.xml
-# ruby convert.rb --check tests/clients/password.xml
-# ruby convert.rb --check tests/clients/pkg_finish.xml
-# ruby convert.rb --check tests/clients/power-management_auto.xml
-# ruby convert.rb --check tests/clients/power-management.xml
-# ruby convert.rb --check tests/clients/powertweak.xml
-# ruby convert.rb --check tests/clients/pre_umount_finish.xml
-# ruby convert.rb --check tests/clients/printer_auto.xml
-# ruby convert.rb --check tests/clients/printer_proposal.xml
-# ruby convert.rb --check tests/clients/printer.xml
-# ruby convert.rb --check tests/clients/print-product.xml
-# ruby convert.rb --check tests/clients/profile_manager.xml
-# ruby convert.rb --check tests/clients/profile-manager.xml
-# ruby convert.rb --check tests/clients/provider.xml
-# ruby convert.rb --check tests/clients/proxy_auto.xml
-# ruby convert.rb --check tests/clients/proxy_finish.xml
-# ruby convert.rb --check tests/clients/proxy_proposal.xml
-# ruby convert.rb --check tests/clients/proxy.xml
-# ruby convert.rb --check tests/clients/release_notes_popup.xml
-# ruby convert.rb --check tests/clients/remotechooser.xml
-# ruby convert.rb --check tests/clients/remoteinstall.xml
-# ruby convert.rb --check tests/clients/remote_proposal.xml
-# ruby convert.rb --check tests/clients/remote.xml
-# ruby convert.rb --check tests/clients/repair.xml
-# ruby convert.rb --check tests/clients/report_auto.xml
-# ruby convert.rb --check tests/clients/restore_auto.xml
-# ruby convert.rb --check tests/clients/restore.xml
-# ruby convert.rb --check tests/clients/rootpart_proposal.xml
-# ruby convert.rb --check tests/clients/routing_auto.xml
-# ruby convert.rb --check tests/clients/routing.xml
-# ruby convert.rb --check tests/clients/runlevel_auto.xml
-# ruby convert.rb --check tests/clients/runlevel_finish.xml
-# ruby convert.rb --check tests/clients/runlevel_proposal.xml
-# ruby convert.rb --check tests/clients/runlevel.xml
-# ruby convert.rb --check tests/clients/samba-client_auto.xml
-# ruby convert.rb --check tests/clients/samba-client.xml
-# ruby convert.rb --check tests/clients/samba-server_auto.xml
-# ruby convert.rb --check tests/clients/samba-server.xml
-# ruby convert.rb --check tests/clients/save_config_finish.xml
-# ruby convert.rb --check tests/clients/save_hw_status_finish.xml
-# ruby convert.rb --check tests/clients/scanner.xml
-# ruby convert.rb --check tests/clients/scripts_auto.xml
-# ruby convert.rb --check tests/clients/SD_AddProfile.xml
-# ruby convert.rb --check tests/clients/SD_DeleteProfile.xml
-# ruby convert.rb --check tests/clients/SD_EditProfile.xml
-# ruby convert.rb --check tests/clients/SD_Report.xml
-# ruby convert.rb --check tests/clients/security_auto.xml
-# ruby convert.rb --check tests/clients/security_summary.xml
-# ruby convert.rb --check tests/clients/security.xml
-# ruby convert.rb --check tests/clients/select_language.xml
-# ruby convert.rb --check tests/clients/slp.xml
-# ruby convert.rb --check tests/clients/software_auto.xml
-# ruby convert.rb --check tests/clients/software_proposal.xml
-# ruby convert.rb --check tests/clients/software_simple_proposal.xml
-# ruby convert.rb --check tests/clients/sound_auto.xml
-# ruby convert.rb --check tests/clients/sound_proposal.xml
-# ruby convert.rb --check tests/clients/sound_summary.xml
-# ruby convert.rb --check tests/clients/sound_write.xml
-# ruby convert.rb --check tests/clients/sound.xml
-# ruby convert.rb --check tests/clients/ssh_settings_finish.xml
-# ruby convert.rb --check tests/clients/storage_auto.xml
-# ruby convert.rb --check tests/clients/storage_finish.xml
-# ruby convert.rb --check tests/clients/stroj-casu.xml
-# ruby convert.rb --check tests/clients/subdomain_no_impl.xml
-# ruby convert.rb --check tests/clients/subdomain.xml
-# ruby convert.rb --check tests/clients/sudo.xml
-# ruby convert.rb --check tests/clients/support.xml
-# ruby convert.rb --check tests/clients/suse_register_auto.xml
-# ruby convert.rb --check tests/clients/switch_scr_finish.xml
-# ruby convert.rb --check tests/clients/sw_single.xml
-# ruby convert.rb --check tests/clients/sysconfig_auto.xml
-# ruby convert.rb --check tests/clients/sysconfig.xml
-# ruby convert.rb --check tests/clients/system_settings_finish.xml
-# ruby convert.rb --check tests/clients/system_settings.xml
-# ruby convert.rb --check tests/clients/test_inst_client.xml
-# ruby convert.rb --check tests/clients/test_proposal.xml
-# ruby convert.rb --check tests/clients/timezone_auto.xml
-# ruby convert.rb --check tests/clients/timezone_proposal.xml
-# ruby convert.rb --check tests/clients/timezone.xml
-# ruby convert.rb --check tests/clients/tv_auto.xml
-# ruby convert.rb --check tests/clients/tv_proposal.xml
-# ruby convert.rb --check tests/clients/tv_write.xml
-# ruby convert.rb --check tests/clients/tv.xml
-# ruby convert.rb --check tests/clients/umount_finish.xml
-# ruby convert.rb --check tests/clients/update_proposal.xml
-# ruby convert.rb --check tests/clients/update.xml
-# ruby convert.rb --check tests/clients/users_auto.xml
-# ruby convert.rb --check tests/clients/users_plugin_ldap_all.xml
-# ruby convert.rb --check tests/clients/users_plugin_samba_groups.xml
-# ruby convert.rb --check tests/clients/users_plugin_samba.xml
-# ruby convert.rb --check tests/clients/users.xml
-# ruby convert.rb --check tests/clients/vendor.xml
-# ruby convert.rb --check tests/clients/view_anymsg.xml
-# ruby convert.rb --check tests/clients/vm_autoyast_proposal.xml
-# ruby convert.rb --check tests/clients/vm_disks_proposal.xml
-# ruby convert.rb --check tests/clients/vm_finish.xml
-# ruby convert.rb --check tests/clients/vm_hardware_proposal.xml
-# ruby convert.rb --check tests/clients/vm_helps_proposal.xml
-# ruby convert.rb --check tests/clients/vm_network_proposal.xml
-# ruby convert.rb --check tests/clients/vm_options_proposal.xml
-# ruby convert.rb --check tests/clients/vm_source_proposal.xml
-# ruby convert.rb --check tests/clients/x11_auto.xml
-# ruby convert.rb --check tests/clients/x11_finish.xml
-# ruby convert.rb --check tests/clients/x11_proposal.xml
-# ruby convert.rb --check tests/clients/x11.xml
-# ruby convert.rb --check tests/clients/xen_auto.xml
-# ruby convert.rb --check tests/clients/xen_mode_proposal.xml
-# ruby convert.rb --check tests/clients/xen.xml
-# ruby convert.rb --check tests/clients/xinetd.xml
-# ruby convert.rb --check tests/clients/XMain.xml
-# ruby convert.rb --check tests/clients/yast_inf_finish.xml
-# 
-# 
+ruby ../src/convert.rb --check clients/add-on_auto.xml
+ruby ../src/convert.rb --check clients/add-on_proposal.xml
+ruby ../src/convert.rb --check clients/add-on.xml
+ruby ../src/convert.rb --check clients/autoinst_scripts1_finish.xml
+ruby ../src/convert.rb --check clients/autoinst_scripts2_finish.xml
+ruby ../src/convert.rb --check clients/autoinst_test_clone.xml
+ruby ../src/convert.rb --check clients/autoinst_test_stage.xml
+ruby ../src/convert.rb --check clients/autoyast.xml
+ruby ../src/convert.rb --check clients/ayast_probe.xml
+ruby ../src/convert.rb --check clients/backup_available_packages.xml
+ruby ../src/convert.rb --check clients/backup_get_packages.xml
+ruby ../src/convert.rb --check clients/backup_proposal.xml
+ruby ../src/convert.rb --check clients/backup_save_profile.xml
+ruby ../src/convert.rb --check clients/backup.xml
+ruby ../src/convert.rb --check clients/bluetooth_auto.xml
+ruby ../src/convert.rb --check clients/bluetooth_proposal.xml
+ruby ../src/convert.rb --check clients/bluetooth.xml
+ruby ../src/convert.rb --check clients/bootfloppy.xml
+ruby ../src/convert.rb --check clients/bootloader_auto.xml
+ruby ../src/convert.rb --check clients/bootloader_finish.xml
+ruby ../src/convert.rb --check clients/bootloader_proposal.xml
+ruby ../src/convert.rb --check clients/bootloader.xml
+ruby ../src/convert.rb --check clients/checkmedia.xml
+ruby ../src/convert.rb --check clients/classes_auto.xml
+ruby ../src/convert.rb --check clients/clone_system.xml
+ruby ../src/convert.rb --check clients/controller.xml
+ruby ../src/convert.rb --check clients/copy_files_finish.xml
+ruby ../src/convert.rb --check clients/copy_logs_finish.xml
+ruby ../src/convert.rb --check clients/copy_systemfiles_finish.xml
+ruby ../src/convert.rb --check clients/country_simple_proposal.xml
+ruby ../src/convert.rb --check clients/create_udev_cdrom.xml
+ruby ../src/convert.rb --check clients/desktop_finish.xml
+ruby ../src/convert.rb --check clients/dhcp-server_auto.xml
+ruby ../src/convert.rb --check clients/dhcp-server.xml
+ruby ../src/convert.rb --check clients/dirinstall_options_proposal.xml
+ruby ../src/convert.rb --check clients/dirinstall_options.xml
+ruby ../src/convert.rb --check clients/dirinstall.xml
+ruby ../src/convert.rb --check clients/disk.xml
+ruby ../src/convert.rb --check clients/dns_auto.xml
+ruby ../src/convert.rb --check clients/dns-server_auto.xml
+ruby ../src/convert.rb --check clients/dns-server.xml
+ruby ../src/convert.rb --check clients/dns.xml
+ruby ../src/convert.rb --check clients/dom0_setup.xml
+ruby ../src/convert.rb --check clients/do_not_show_again_editor.xml
+ruby ../src/convert.rb --check clients/driver_update1_finish.xml
+ruby ../src/convert.rb --check clients/driver_update2_finish.xml
+ruby ../src/convert.rb --check clients/dsl_proposal.xml
+ruby ../src/convert.rb --check clients/dsl.xml
+ruby ../src/convert.rb --check clients/files_auto.xml
+ruby ../src/convert.rb --check clients/firewall_auto.xml
+ruby ../src/convert.rb --check clients/firewall_proposal.xml
+ruby ../src/convert.rb --check clients/firewall.xml
+ruby ../src/convert.rb --check clients/fonts_finish.xml
+ruby ../src/convert.rb --check clients/general_auto.xml
+ruby ../src/convert.rb --check clients/GenProf.xml
+ruby ../src/convert.rb --check clients/groups.xml
+ruby ../src/convert.rb --check clients/host_auto.xml
+ruby ../src/convert.rb --check clients/host.xml
+ruby ../src/convert.rb --check clients/hwinfo_proposal.xml
+ruby ../src/convert.rb --check clients/hwinfo.xml
+ruby ../src/convert.rb --check clients/idedma_auto.xml
+ruby ../src/convert.rb --check clients/idedma_summary.xml
+ruby ../src/convert.rb --check clients/idedma_write.xml
+ruby ../src/convert.rb --check clients/idedma.xml
+ruby ../src/convert.rb --check clients/inetd_auto.xml
+ruby ../src/convert.rb --check clients/inetd_proposal.xml
+ruby ../src/convert.rb --check clients/inetd.xml
+ruby ../src/convert.rb --check clients/inst_addon_update_sources.xml
+ruby ../src/convert.rb --check clients/inst_add-on.xml
+ruby ../src/convert.rb --check clients/installation_worker.xml
+ruby ../src/convert.rb --check clients/installation.xml
+ruby ../src/convert.rb --check clients/inst_ask_net_test.xml
+ruby ../src/convert.rb --check clients/inst_ask_online_update.xml
+ruby ../src/convert.rb --check clients/inst_auth.xml
+ruby ../src/convert.rb --check clients/inst_autoconfigure.xml
+ruby ../src/convert.rb --check clients/inst_autoimage.xml
+ruby ../src/convert.rb --check clients/inst_autoinit.xml
+ruby ../src/convert.rb --check clients/inst_autopost.xml
+ruby ../src/convert.rb --check clients/inst_autosetup.xml
+ruby ../src/convert.rb --check clients/inst_backup.xml
+ruby ../src/convert.rb --check clients/inst_checkmedia.xml
+ruby ../src/convert.rb --check clients/inst_congratulate.xml
+ruby ../src/convert.rb --check clients/inst_custom_packages.xml
+ruby ../src/convert.rb --check clients/inst_custom_part.xml
+ruby ../src/convert.rb --check clients/inst_desktop.xml
+ruby ../src/convert.rb --check clients/inst_dirinstall_finish.xml
+ruby ../src/convert.rb --check clients/inst_dirinstall.xml
+ruby ../src/convert.rb --check clients/inst_disks_activate.xml
+ruby ../src/convert.rb --check clients/inst_disk.xml
+ruby ../src/convert.rb --check clients/inst_doit.xml
+ruby ../src/convert.rb --check clients/inst_do_net_test.xml
+ruby ../src/convert.rb --check clients/inst_do_resize.xml
+ruby ../src/convert.rb --check clients/inst_evms.xml
+ruby ../src/convert.rb --check clients/inst_extrasources.xml
+ruby ../src/convert.rb --check clients/inst_fam.xml
+ruby ../src/convert.rb --check clients/inst_features.xml
+ruby ../src/convert.rb --check clients/inst_finish.xml
+ruby ../src/convert.rb --check clients/inst_hostname.xml
+ruby ../src/convert.rb --check clients/inst_hwinfo.xml
+ruby ../src/convert.rb --check clients/inst_info.xml
+ruby ../src/convert.rb --check clients/inst_iscsi-client.xml
+ruby ../src/convert.rb --check clients/inst_kickoff.xml
+ruby ../src/convert.rb --check clients/inst_language_add-on.xml
+ruby ../src/convert.rb --check clients/inst_language.xml
+ruby ../src/convert.rb --check clients/inst_license.xml
+ruby ../src/convert.rb --check clients/inst_lvm_lv.xml
+ruby ../src/convert.rb --check clients/inst_lvm_pv.xml
+ruby ../src/convert.rb --check clients/inst_mediacopy.xml
+ruby ../src/convert.rb --check clients/inst_media.xml
+ruby ../src/convert.rb --check clients/inst_mode.xml
+ruby ../src/convert.rb --check clients/inst_mouse.xml
+ruby ../src/convert.rb --check clients/inst_netprobe.xml
+ruby ../src/convert.rb --check clients/inst_netsetup.xml
+ruby ../src/convert.rb --check clients/inst_packages.xml
+ruby ../src/convert.rb --check clients/inst_part_proposal.xml
+ruby ../src/convert.rb --check clients/inst_pre_install.xml
+ruby ../src/convert.rb --check clients/inst_prepdisk.xml
+ruby ../src/convert.rb --check clients/inst_proposal.xml
+ruby ../src/convert.rb --check clients/inst_release_notes.xml
+ruby ../src/convert.rb --check clients/inst_repair.xml
+ruby ../src/convert.rb --check clients/inst_resize_ui.xml
+ruby ../src/convert.rb --check clients/inst_restore_settings.xml
+ruby ../src/convert.rb --check clients/inst_rootpart.xml
+ruby ../src/convert.rb --check clients/inst_root.xml
+ruby ../src/convert.rb --check clients/inst_rpmcopy.xml
+ruby ../src/convert.rb --check clients/inst_save_hardware_status.xml
+ruby ../src/convert.rb --check clients/inst_source.xml
+ruby ../src/convert.rb --check clients/inst_startup.xml
+ruby ../src/convert.rb --check clients/inst_suseconfig.xml
+ruby ../src/convert.rb --check clients/inst_suse_register.xml
+ruby ../src/convert.rb --check clients/inst_sw_select.xml
+ruby ../src/convert.rb --check clients/inst_system_analysis.xml
+ruby ../src/convert.rb --check clients/inst_target_part.xml
+ruby ../src/convert.rb --check clients/inst_target_selection.xml
+ruby ../src/convert.rb --check clients/inst_test_workflow.xml
+ruby ../src/convert.rb --check clients/inst_timezone.xml
+ruby ../src/convert.rb --check clients/inst_update_partition.xml
+ruby ../src/convert.rb --check clients/inst_update.xml
+ruby ../src/convert.rb --check clients/inst_user.xml
+ruby ../src/convert.rb --check clients/inst_vm_autoyast.xml
+ruby ../src/convert.rb --check clients/inst_vm_disks.xml
+ruby ../src/convert.rb --check clients/inst_vm_hardware.xml
+ruby ../src/convert.rb --check clients/inst_vm_kickoff.xml
+ruby ../src/convert.rb --check clients/inst_vm_manage.xml
+ruby ../src/convert.rb --check clients/inst_vm_network.xml
+ruby ../src/convert.rb --check clients/inst_vm_options.xml
+ruby ../src/convert.rb --check clients/inst_vm_source.xml
+ruby ../src/convert.rb --check clients/inst_welcome.xml
+ruby ../src/convert.rb --check clients/inst_x11.xml
+ruby ../src/convert.rb --check clients/inst_xen_create.xml
+ruby ../src/convert.rb --check clients/inst_xen_mode.xml
+ruby ../src/convert.rb --check clients/inst_you.xml
+ruby ../src/convert.rb --check clients/ipv6_proposal.xml
+ruby ../src/convert.rb --check clients/irc.xml
+ruby ../src/convert.rb --check clients/irda.xml
+ruby ../src/convert.rb --check clients/iscsi-client_auto.xml
+ruby ../src/convert.rb --check clients/iscsi-client_finish.xml
+ruby ../src/convert.rb --check clients/iscsi-client_proposal.xml
+ruby ../src/convert.rb --check clients/iscsi-client.xml
+ruby ../src/convert.rb --check clients/isdn_proposal.xml
+ruby ../src/convert.rb --check clients/isdn.xml
+ruby ../src/convert.rb --check clients/joystick.xml
+ruby ../src/convert.rb --check clients/kerberos-client_auto.xml
+ruby ../src/convert.rb --check clients/kerberos-client.xml
+ruby ../src/convert.rb --check clients/kerberos.xml
+ruby ../src/convert.rb --check clients/kernel_finish.xml
+ruby ../src/convert.rb --check clients/keyboard_auto.xml
+ruby ../src/convert.rb --check clients/keyboard_proposal.xml
+ruby ../src/convert.rb --check clients/keyboard_simple_proposal.xml
+ruby ../src/convert.rb --check clients/keyboard.xml
+ruby ../src/convert.rb --check clients/lan_auto.xml
+ruby ../src/convert.rb --check clients/language_auto.xml
+ruby ../src/convert.rb --check clients/language_proposal.xml
+ruby ../src/convert.rb --check clients/language_simple_proposal.xml
+ruby ../src/convert.rb --check clients/language.xml
+ruby ../src/convert.rb --check clients/lan_proposal.xml
+ruby ../src/convert.rb --check clients/lan.xml
+ruby ../src/convert.rb --check clients/ldap_auto.xml
+ruby ../src/convert.rb --check clients/ldap_browser.xml
+ruby ../src/convert.rb --check clients/ldap-client.xml
+ruby ../src/convert.rb --check clients/ldap_config.xml
+ruby ../src/convert.rb --check clients/ldap.xml
+ruby ../src/convert.rb --check clients/ldconfig_finish.xml
+ruby ../src/convert.rb --check clients/LogProf.xml
+ruby ../src/convert.rb --check clients/lvm_config_ui.xml
+ruby ../src/convert.rb --check clients/lvm_config.xml
+ruby ../src/convert.rb --check clients/mail_auto.xml
+ruby ../src/convert.rb --check clients/mail.xml
+ruby ../src/convert.rb --check clients/media_proposal.xml
+ruby ../src/convert.rb --check clients/menu.xml
+ruby ../src/convert.rb --check clients/modem_proposal.xml
+ruby ../src/convert.rb --check clients/modem.xml
+ruby ../src/convert.rb --check clients/mode_proposal.xml
+ruby ../src/convert.rb --check clients/mouse_proposal.xml
+ruby ../src/convert.rb --check clients/mouse.xml
+ruby ../src/convert.rb --check clients/network_finish.xml
+ruby ../src/convert.rb --check clients/networkmanager_proposal.xml
+ruby ../src/convert.rb --check clients/network.xml
+ruby ../src/convert.rb --check clients/nfs_auto.xml
+ruby ../src/convert.rb --check clients/nfs-client.xml
+ruby ../src/convert.rb --check clients/nfs.xml
+ruby ../src/convert.rb --check clients/nis_auto.xml
+ruby ../src/convert.rb --check clients/nis-client.xml
+ruby ../src/convert.rb --check clients/nis.xml
+ruby ../src/convert.rb --check clients/ntp-client_auto.xml
+ruby ../src/convert.rb --check clients/ntp-client.xml
+ruby ../src/convert.rb --check clients/online_update_auto.xml
+ruby ../src/convert.rb --check clients/online_update_install.xml
+ruby ../src/convert.rb --check clients/online_update_select.xml
+ruby ../src/convert.rb --check clients/online_update_setup.xml
+ruby ../src/convert.rb --check clients/online_update_start.xml
+ruby ../src/convert.rb --check clients/online_update.xml
+ruby ../src/convert.rb --check clients/osr_module_list.xml
+ruby ../src/convert.rb --check clients/osr_verified_packages.xml
+ruby ../src/convert.rb --check clients/packages_proposal.xml
+ruby ../src/convert.rb --check clients/partitions_proposal.xml
+ruby ../src/convert.rb --check clients/password.xml
+ruby ../src/convert.rb --check clients/pkg_finish.xml
+ruby ../src/convert.rb --check clients/power-management_auto.xml
+ruby ../src/convert.rb --check clients/power-management.xml
+ruby ../src/convert.rb --check clients/powertweak.xml
+ruby ../src/convert.rb --check clients/pre_umount_finish.xml
+ruby ../src/convert.rb --check clients/printer_auto.xml
+ruby ../src/convert.rb --check clients/printer_proposal.xml
+ruby ../src/convert.rb --check clients/printer.xml
+ruby ../src/convert.rb --check clients/print-product.xml
+ruby ../src/convert.rb --check clients/profile_manager.xml
+ruby ../src/convert.rb --check clients/profile-manager.xml
+ruby ../src/convert.rb --check clients/provider.xml
+ruby ../src/convert.rb --check clients/proxy_auto.xml
+ruby ../src/convert.rb --check clients/proxy_finish.xml
+ruby ../src/convert.rb --check clients/proxy_proposal.xml
+ruby ../src/convert.rb --check clients/proxy.xml
+ruby ../src/convert.rb --check clients/release_notes_popup.xml
+ruby ../src/convert.rb --check clients/remotechooser.xml
+ruby ../src/convert.rb --check clients/remoteinstall.xml
+ruby ../src/convert.rb --check clients/remote_proposal.xml
+ruby ../src/convert.rb --check clients/remote.xml
+ruby ../src/convert.rb --check clients/repair.xml
+ruby ../src/convert.rb --check clients/report_auto.xml
+ruby ../src/convert.rb --check clients/restore_auto.xml
+ruby ../src/convert.rb --check clients/restore.xml
+ruby ../src/convert.rb --check clients/rootpart_proposal.xml
+ruby ../src/convert.rb --check clients/routing_auto.xml
+ruby ../src/convert.rb --check clients/routing.xml
+ruby ../src/convert.rb --check clients/runlevel_auto.xml
+ruby ../src/convert.rb --check clients/runlevel_finish.xml
+ruby ../src/convert.rb --check clients/runlevel_proposal.xml
+ruby ../src/convert.rb --check clients/runlevel.xml
+ruby ../src/convert.rb --check clients/samba-client_auto.xml
+ruby ../src/convert.rb --check clients/samba-client.xml
+ruby ../src/convert.rb --check clients/samba-server_auto.xml
+ruby ../src/convert.rb --check clients/samba-server.xml
+ruby ../src/convert.rb --check clients/save_config_finish.xml
+ruby ../src/convert.rb --check clients/save_hw_status_finish.xml
+ruby ../src/convert.rb --check clients/scanner.xml
+ruby ../src/convert.rb --check clients/scripts_auto.xml
+ruby ../src/convert.rb --check clients/SD_AddProfile.xml
+ruby ../src/convert.rb --check clients/SD_DeleteProfile.xml
+ruby ../src/convert.rb --check clients/SD_EditProfile.xml
+ruby ../src/convert.rb --check clients/SD_Report.xml
+ruby ../src/convert.rb --check clients/security_auto.xml
+ruby ../src/convert.rb --check clients/security_summary.xml
+ruby ../src/convert.rb --check clients/security.xml
+ruby ../src/convert.rb --check clients/select_language.xml
+ruby ../src/convert.rb --check clients/slp.xml
+ruby ../src/convert.rb --check clients/software_auto.xml
+ruby ../src/convert.rb --check clients/software_proposal.xml
+ruby ../src/convert.rb --check clients/software_simple_proposal.xml
+ruby ../src/convert.rb --check clients/sound_auto.xml
+ruby ../src/convert.rb --check clients/sound_proposal.xml
+ruby ../src/convert.rb --check clients/sound_summary.xml
+ruby ../src/convert.rb --check clients/sound_write.xml
+ruby ../src/convert.rb --check clients/sound.xml
+ruby ../src/convert.rb --check clients/ssh_settings_finish.xml
+ruby ../src/convert.rb --check clients/storage_auto.xml
+ruby ../src/convert.rb --check clients/storage_finish.xml
+ruby ../src/convert.rb --check clients/stroj-casu.xml
+ruby ../src/convert.rb --check clients/subdomain_no_impl.xml
+ruby ../src/convert.rb --check clients/subdomain.xml
+ruby ../src/convert.rb --check clients/sudo.xml
+ruby ../src/convert.rb --check clients/support.xml
+ruby ../src/convert.rb --check clients/suse_register_auto.xml
+ruby ../src/convert.rb --check clients/switch_scr_finish.xml
+ruby ../src/convert.rb --check clients/sw_single.xml
+ruby ../src/convert.rb --check clients/sysconfig_auto.xml
+ruby ../src/convert.rb --check clients/sysconfig.xml
+ruby ../src/convert.rb --check clients/system_settings_finish.xml
+ruby ../src/convert.rb --check clients/system_settings.xml
+ruby ../src/convert.rb --check clients/test_inst_client.xml
+ruby ../src/convert.rb --check clients/test_proposal.xml
+ruby ../src/convert.rb --check clients/timezone_auto.xml
+ruby ../src/convert.rb --check clients/timezone_proposal.xml
+ruby ../src/convert.rb --check clients/timezone.xml
+ruby ../src/convert.rb --check clients/tv_auto.xml
+ruby ../src/convert.rb --check clients/tv_proposal.xml
+ruby ../src/convert.rb --check clients/tv_write.xml
+ruby ../src/convert.rb --check clients/tv.xml
+ruby ../src/convert.rb --check clients/umount_finish.xml
+ruby ../src/convert.rb --check clients/update_proposal.xml
+ruby ../src/convert.rb --check clients/update.xml
+ruby ../src/convert.rb --check clients/users_auto.xml
+ruby ../src/convert.rb --check clients/users_plugin_ldap_all.xml
+ruby ../src/convert.rb --check clients/users_plugin_samba_groups.xml
+ruby ../src/convert.rb --check clients/users_plugin_samba.xml
+ruby ../src/convert.rb --check clients/users.xml
+ruby ../src/convert.rb --check clients/vendor.xml
+ruby ../src/convert.rb --check clients/view_anymsg.xml
+ruby ../src/convert.rb --check clients/vm_autoyast_proposal.xml
+ruby ../src/convert.rb --check clients/vm_disks_proposal.xml
+ruby ../src/convert.rb --check clients/vm_finish.xml
+ruby ../src/convert.rb --check clients/vm_hardware_proposal.xml
+ruby ../src/convert.rb --check clients/vm_helps_proposal.xml
+ruby ../src/convert.rb --check clients/vm_network_proposal.xml
+ruby ../src/convert.rb --check clients/vm_options_proposal.xml
+ruby ../src/convert.rb --check clients/vm_source_proposal.xml
+ruby ../src/convert.rb --check clients/x11_auto.xml
+ruby ../src/convert.rb --check clients/x11_finish.xml
+ruby ../src/convert.rb --check clients/x11_proposal.xml
+ruby ../src/convert.rb --check clients/x11.xml
+ruby ../src/convert.rb --check clients/xen_auto.xml
+ruby ../src/convert.rb --check clients/xen_mode_proposal.xml
+ruby ../src/convert.rb --check clients/xen.xml
+ruby ../src/convert.rb --check clients/xinetd.xml
+ruby ../src/convert.rb --check clients/XMain.xml
+ruby ../src/convert.rb --check clients/yast_inf_finish.xml
+
+

@@ -1,3 +1,4 @@
+mkdir clients
 ( name=add-on_auto; ycpc -c -x /usr/share/YaST2/clients/$name.ycp -o clients/$name.xml)
 ( name=add-on_proposal; ycpc -c -x /usr/share/YaST2/clients/$name.ycp -o clients/$name.xml)
 ( name=add-on; ycpc -c -x /usr/share/YaST2/clients/$name.ycp -o clients/$name.xml)
