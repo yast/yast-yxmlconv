@@ -45,6 +45,10 @@ class YBlock
 	  when "file"
 	    @listener = Symbols.new :module
 	    @current = :symbols
+	  when "module"
+	    $output.o( [ "module ", h["name"], :eol, :inc ] )
+	    @listener = Symbols.new :module
+	    @current = :symbols
 	  else
 	    raise "Unhandled kind #{@kind} in <block>"
 	end
@@ -68,6 +72,7 @@ class YBlock
     end
     case name
       when "block"
+	$output.o( :end ) if @kind == "module"
 	debug "xx End of #{self}"
 	return false
       else
