@@ -66,13 +66,20 @@ ToDo
 - include files
   The xml output doesn't show 'include' statements but only 'filename'
   at the beginning and end of an included file. The file itself is part
-  of the xml stream.
+  of the xml stream and thus the resulting ruby file.
   Maybe <filename> tags should be tracked and ruby conversion disabled
   until <filename> points back to the original file.
 
-- module
-  modules aren't handled yet
-
 - yereference
-  References aren't handled yet
+  References aren't properly handled
+  a comment is placed below the reference currently
 
+- ycp term
+  There is no Ruby representation for YCP terms but they are used
+  heavily esp. in UI code. Prefixing every term with UI:: is probably
+  not a good solution. Maybe a fixed list of 'known' UI terms (HBox,
+  VBox, ...) could be helpful
+
+- break in switch
+  YCP uses break to exit a 'case' within 'switch' - just like C
+  This is unneeded in Ruby and should be removed.
