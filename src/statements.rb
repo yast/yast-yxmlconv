@@ -714,7 +714,7 @@ class YCase
       return true
     end
     case name
-      when "case"
+      when "case", "default"
 	$output.o( :dec ) if @state == :stmt
 	debug "xx End of #{self}"
 	return false
