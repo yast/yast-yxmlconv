@@ -1,8 +1,0 @@
-{
-  return 1.42+1.42;
-  return 1.42-1.42;
-  return -1.42;
-  return 1.42*1.42;
-  return 1.42/1.42;
-  return tofloat("1.42");
-}

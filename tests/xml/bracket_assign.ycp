@@ -1,4 +1,0 @@
-{
-  map<integer,integer> m = $[];
-  m[1] = 1;
-}
