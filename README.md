@@ -5,7 +5,7 @@ Obsoleted Module
 
 This YCP to Ruby converter is obsoleted.
 
-The current converter developed at [y2r](../../../y2r) and [ycp-killer](../../../ycp-killer) projects.
+The current converter is located at [y2r](../../../y2r) and [ycp-killer](../../../ycp-killer) projects.
 
 
 GIT
