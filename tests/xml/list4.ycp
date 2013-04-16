@@ -1,5 +1,0 @@
-{
-  integer i = 42;
-  return [ 1, 1, 1, 1 ];
-  return [ i, i+i, i+i+i, i+i+i+i ];
-}

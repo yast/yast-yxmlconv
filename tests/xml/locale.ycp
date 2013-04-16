@@ -1,4 +1,0 @@
-{
-  textdomain "en";
-  return _("<p>'English'&\"Deutsch\"</p>");
-}
