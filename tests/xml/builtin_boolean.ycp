@@ -1,6 +1,0 @@
-{
-  return (true && false);
-  return (false || true);
-  return (! (false && false));
-  return (! (false && (false || true) || !(true && false) ) );
-}

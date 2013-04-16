@@ -1,4 +1,0 @@
-{
-  textdomain "de";
-  return _("foo", "bar", 42);
-}
